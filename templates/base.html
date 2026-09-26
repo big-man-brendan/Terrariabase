@@ -1,26 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href='https://fonts.googleapis.com/css?family=Raleway|Merienda+One' rel='stylesheet' type='text/css'>
 
-    <title>Yu-Gi-Oh Cards</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css"
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Merienda+One"
+          rel="stylesheet"
+          type="text/css">
+
+    <title>Terraria Weapons</title>
+
+    <link rel="stylesheet"
+          type="text/css"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
-	<div id="container">
-	<header>
-		<h1>Yu Gi Oh</h1>
-	</header>
-    <nav>
-        <br>
-    </nav>
-    <section>
-{% block main %}{% endblock %}
-    </section>
-    <footer>
-        &Copy; D Benseman 2022
-    </footer>
+
+    <div id="container">
+
+        <header>
+            <h1>Terraria Weapons</h1>
+        </header>
+
+        <nav>
+        </nav>
+
+        <section>
+        <h2>
+        <a href="{{ url_for('render_home') }}">Go back to home</a>
+        </h2>
+
+        <h2>Search the database</h2>
+
+        <h2>Go to a random card</h2>
+
+
+            {% block main %}{% endblock %}
+        </section>
+
+
+
     </div>
+
 </body>
 </html>
+

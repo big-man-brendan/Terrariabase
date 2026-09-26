@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+<link href="https://fonts.googleapis.com/css?family=Raleway|Merienda+One"
+      rel="stylesheet"
+      type="text/css">
+
+<title>Terraria Weapons</title>
+
+<link rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+
+      <style>
+      body{
+      background-image: url("static/images/poster.jpg");
+      background-size: cover;
+      background-position: center;
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+
+<div id="container">
+
+    <header>
+        <h1>Terraria Weapons</h1>
+    </header>
+
+
+
+    <section>
+        <h2></h2>
+
+        <h2>
+            Welcome to my Terraria weapons database.
+        </h2>
+        <h2></h2>
+        <h2>
+        <a href="{{ url_for('render_data') }}">View the entire database</a>
+        </h2>
+
+        <h2>Search the database</h2>
+
+        <h2>Go to a random card</h2>
+
+
+
+        <h2></h2>
+
+        <h1>My favorite weapons:</h1>
+        <h2></h2>
+
+        {% block main %}{% endblock %}
+
+
+    </section>
+
+</div>
+
+
+</body>
+</html>

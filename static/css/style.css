@@ -1,178 +1,122 @@
+@font-face {
+	font-family: "Andy";
+	src: url("../images/ANDYB.ttf") format("truetype");
+}
+
+* {
+	box-sizing: border-box;
+}
+
 body {
-	background-color: #e3c024;
-	font-family: 'Raleway', sans-serif;
-	background: linear-gradient(to right, #e3c024, #cd2727);
+	margin: 0;
+	padding: 20px;
+
+
+	background-image: url("../images/Header.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+
+	color: white;
+	font-family: "Andy", Arial, sans-serif;
+
+
 }
 
 #container {
-	background-color: #6c9edb;
-	width: 950px;
-	color: #e3c024;
-	margin: auto;
-	background: linear-gradient(to top, #6c9edb, #1b60bb);
-	border-radius: 20px;
+width: 1100px;
+max-width: 100%;
+margin: auto;
+
+
+background: #5c3a21;
+border: 2px solid #3b2415;
+
+overflow: hidden;
+
+
 }
 
 header {
-	background-color: #6c9edb;
-	background: linear-gradient(to bottom, #6c9edb, #1b60bb);
-	font-family: 'Merienda One', cursive;
+	padding: 20px;
+
+
 	text-align: center;
-	text-shadow: 4px 4px 3px #333;
-	font-size: 25px;
-	margin-bottom: 0;
-	border-radius: 20px;
+
+	background: #6b4528;
+	border-bottom: 2px solid #3b2415;
+
+
 }
 
-nav {
-	color: #000;
-	height: 400px;
-	background-image: url('/static/images/yugioh.jpg');
-	background-size: 905px;
-	margin-top: 0;
+header h1 {
+	margin: 0;
+
+
+	font-family: "Andy", Arial, sans-serif;
+	font-size: 36px;
+
+	color: white;
+
+
 }
 
-nav ul {
-  text-align: left;
-  display: inline;
-  margin: 0;
-  padding: 15px 4px 17px 0;
-  list-style: none;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-
-nav ul li {
-  font: bold 12px/18px;
-  display: inline-block;
-  margin-right: -4px;
-  width: 113px;
-  position: relative;
-  padding: 15px 20px;
-  background: #e3c024;
-  cursor: pointer;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-nav ul li:hover {
-  background: #cd2727;
-  color: #fff;
-}
-
-nav ul li ul {
-  padding: 0;
-  position: absolute;
-  top: 32px;
-  left: 0;
-  width: 200px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transiton: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -ms-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  -transition: opacity 0.2s;
-}
-
-nav ul li ul li { 
-  background: #cd2727; 
-  display: block; 
-  color: #fff;
-  text-shadow: 0 -1px 0 #000;
-}
-
-nav ul li ul li:hover { background: #b11b1c; }
-
-nav ul li:hover ul {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
-
-a {
-	color: #000;
-	display: block;
-	text-decoration: none;
-}
 
 section {
-	background-color: #81ba8d;
-	padding: 5px;
-	background: linear-gradient(to bottom, #81ba8d, #1f8b35);
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	row-gap: 20px;
-	column-gap: 20px;
-}
-
-h2 {
-	font-family: 'Merienda One', cursive;
-	text-shadow: 3px 3px 4px #333;
-	color: #cd2727;
-}
-
-section > p {
-	color: #cd2727;
-	text-shadow: 1px 1px 1px #333;
-}
-
-table {
-	border-collapse: collapse;
-	vertical-align: top;
-
-}
-
-th {
-	text-align: left;
-	padding: 5px;
-	color: #cd2727;
-}
-td {
-	border-top: 1px solid #666;
-	vertical-align: top;
-	padding: 5px;
-	text-align: justify;
-}
-
-.number {
-/*	text-align: right;
-*/
-}
-
-.name {
-	font-weight: bold;
-	text-shadow: 2px 2px 2px #666;
-	margin-left: 60px;
-}
-
-footer {
 	padding: 20px;
-	background-color: #6c9edb;
-	background: linear-gradient(to bottom, #6c9edb, #1b60bb);
-	font-family: 'Merienda One', cursive;
-	border-radius: 20px;
+
+
+	background: #5c3a21;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 15px;
+
+
 }
 
-article {
-	border: 2px solid black;
-	box-shadow: 2px 2px 10px #fff;
-	background-color: #fff;
-	color: #000;
-	padding: 5px;
-	border-radius: 20px;
-	background-image: url('/static/images/yugiohCard.png');
-	background-size: 100%;
+.weapon-card {
+	width: 100%;
+	padding: 15px;
+
+
+	background: #6b4528;
+	border: 2px solid #3b2415;
+
+
 }
 
-article:hover {
-	background-color: #6c9edb;
+.weapon-card h2 {
+	margin: 0 0 15px;
+
+
+	text-align: center;
+
+	font-family: "Andy", Arial, sans-serif;
+	font-size: 21px;
+
+	color: white;
+
+
 }
+
+
+.weapon-card h3 {
+	margin: 10px 0;
+
+
+	text-align: center;
+
+	font-size: 18px;
+
+
+}
+
+
+
+a {
+	color: #8aff90;
+	text-decoration: underline;
+}
+
