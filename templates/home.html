@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 
 
 <title>Terraria Weapons</title>
@@ -38,19 +37,79 @@
         <h2>
             Welcome to my Terraria weapons database.
         </h2>
-        <h2></h2>
+
+    </section>
+
+    <section class="navbar">
+
+        <h2><a href="{{ url_for('render_home') }}">Home page</a></h2>
+
+        <h2><a href="{{ url_for('render_data') }}">Entire database</a></h2>
+
+        <h2><a href="{{ url_for('render_zenith') }}">Zenith</a>
+
+         <h2>
+
+        <form action="{{ url_for('render_data') }}" method="GET" class="search-form">
+    <input
+        type="search"
+        name="name"
+        placeholder="Search by name"
+        value="{{ name_search }}"
+    >
+    <button type="submit">Search</button>
+</form>
+
+</h2>
+
         <h2>
-        <a href="{{ url_for('render_data') }}">View the entire database</a>
-        </h2>
+                <form action="{{ url_for('render_data') }}" method="GET" class="search-form">
+    <input
+        type="search"
+        name="all"
+        placeholder="Search all columns"
+        value="{{ all_search }}"
+    >
+    <button type="submit">Search</button>
+</form>
 
-        <h2>Search the database</h2>
+</h2>
 
-        <h2>Go to a random card</h2>
+
+     </section>
+
+
+
+     <h2> About the database </h2>
+
+     <h3>The Terraria Weapons Database is a comprehensive collection of weapons available in the desktop/PC version of Terraria. It includes a wide range of weapons from across the game, with statistics and information updated to date for version 1.4.5.8. There are <b>581</b> rows
+    <br><br>
+    This database is designed to help players explore the game's weapons, compare different items, and find the information they need to choose which weapons they want to use at different points in the games progression. Whether your a completly new terraria player, or a well seasoned pro, you can definitely find some usefull infomation here.
+
+     </h3>
+
+        <section>
+
+        <h2></h2>
+        <h1>Website fetures</h1>
+        <h2></h2>
+        <h2>Home page</h2>
+        <h2>Searching by name</h2>
+        <h2>Searchign by all columns</h2>
+
+        <h3>This is the page that you are on right now. Its the one you start on when you first join the website. This page conatins infomation about the entire site, as well as links to other pages</h3>
+        <h3>This feture allows you to search the entire database just by the name of each item. This lets you be specific, if you already know which weapon you want to find and gain infomation on</h3>
+        <h3>This function allows you to search the databaase by all columns. You can use this to find weapons under a specific rarity, damage, or any other colunms. This is usefull if you dont already know what specific item you want to use</h3>
+
+    </section>
+
+
+
+    <section>
 
 
 
         <h2></h2>
-
         <h1>My favorite weapons:</h1>
         <h2></h2>
 
@@ -59,6 +118,7 @@
 
     </section>
 
+    <h3>Images and infomation comes from the offical terraria wiki:  <a href='https://terraria.wiki.gg' target="_blank">terraria.wiki.gg</a></h3>
 </div>
 
 

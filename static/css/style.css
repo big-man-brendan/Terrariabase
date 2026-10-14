@@ -38,6 +38,13 @@ overflow: hidden;
 
 }
 
+#container > h2,
+#container > h3 {
+
+padding: 0 20px;
+
+}
+
 header {
 	padding: 20px;
 
@@ -62,6 +69,20 @@ header h1 {
 
 }
 
+
+.navbar {
+	padding: 20px;
+
+	text-align: center;
+
+	background: #5c3a21;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 15px;
+
+
+}
 
 section {
 	padding: 20px;
@@ -102,6 +123,8 @@ section {
 }
 
 
+
+
 .weapon-card h3 {
 	margin: 10px 0;
 
@@ -113,6 +136,15 @@ section {
 
 }
 
+.zenith {
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+}
 
 
 a {
@@ -120,3 +152,21 @@ a {
 	text-decoration: underline;
 }
 
+.search-form {
+	display: flex;
+
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	padding: 0 20px;
+	margin-bottom: 20px;
+
+	font-family: "Andy", Arial, sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.search-form input,
+.search-form button {
+	font: inherit;
+}

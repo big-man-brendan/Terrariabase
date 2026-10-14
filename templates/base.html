@@ -13,21 +13,51 @@
     <div id="container">
 
         <header>
-            <h1>Terraria Weapons</h1>
+            <h1>Database</h1>
         </header>
 
         <nav>
         </nav>
 
-        <section>
+    <section class="navbar">
+
+        <h2><a href="{{ url_for('render_home') }}">Home page</a></h2>
+
+        <h2><a href="{{ url_for('render_data') }}">Entire database</a></h2>
+
+        <h2><a href="{{ url_for('render_zenith') }}">Zenith</a>
+
+         <h2>
+
+        <form action="{{ url_for('render_data') }}" method="GET" class="search-form">
+    <input
+        type="search"
+        name="name"
+        placeholder="Search by name"
+        value="{{ name_search }}"
+    >
+    <button type="submit">Search</button>
+</form>
+
+</h2>
+
         <h2>
-        <a href="{{ url_for('render_home') }}">Go back to home</a>
-        </h2>
+                <form action="{{ url_for('render_data') }}" method="GET" class="search-form">
+    <input
+        type="search"
+        name="all"
+        placeholder="Search all columns"
+        value="{{ all_search }}"
+    >
+    <button type="submit">Search</button>
+</form>
 
-        <h2>Search the database</h2>
+</h2>
 
-        <h2>Go to a random card</h2>
 
+     </section>
+
+        <section>
 
             {% block main %}{% endblock %}
         </section>
