@@ -1,0 +1,42 @@
+{% extends "zenith.html" %}
+
+{% block main %}
+
+{% for row in cards %}
+
+<div class="weapon-card">
+
+
+<h2>{{ row[1] }}</h2>
+
+<img src="{{ url_for('static', filename='images/weapons/' + row[8]) }}"
+     alt="{{ row[1] }}">
+
+<p>Rarity: {{ row[10] }}</p>
+
+<p>Damage: {{ row[2] }}</p>
+
+<p>Damage Type: {{ row[3] }}</p>
+
+<p>Knockback: {{ row[4] }}</p>
+
+<p>Crit Chance: {{ row[5] }}%</p>
+
+<p>Use Time: {{ row[6] }}</p>
+
+<p>Type: {{ row[7] }}</p>
+
+<p>Available: {{ row[9] }}</p>
+
+{% if row[11] == 1 %}
+    <p>Hard Mode: Yes</p>
+{% else %}
+    <p>Hard Mode: No</p>
+{% endif %}
+
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

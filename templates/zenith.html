@@ -1,0 +1,108 @@
+
+
+<title>The Zenith</title>
+
+<link rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+
+      <style>
+      body{
+      background-image: url("../static/images/background.jpg");
+      background-size: cover;
+      background-position: center;
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+
+<div id="container">
+
+    <header>
+        <h1>The Zenith</h1>
+    </header>
+
+
+
+    <section class="navbar">
+
+        <h2><a href="{{ url_for('render_home') }}">Home page</a></h2>
+
+        <h2><a href="{{ url_for('render_data') }}">Entire database</a></h2>
+
+        <h2><a href="{{ url_for('render_zenith') }}">Zenith</a>
+
+         <h2>
+
+        <form action="{{ url_for('render_data') }}" method="GET" class="search-form">
+    <input
+        type="search"
+        name="name"
+        placeholder="Search by name"
+        value="{{ name_search }}"
+    >
+    <button type="submit">Search</button>
+</form>
+
+</h2>
+
+        <h2>
+                <form action="{{ url_for('render_data') }}" method="GET" class="search-form">
+    <input
+        type="search"
+        name="all"
+        placeholder="Search all columns"
+        value="{{ all_search }}"
+    >
+    <button type="submit">Search</button>
+</form>
+
+</h2>
+
+
+     </section>
+
+
+
+     <h2> About the Zenith </h2>
+
+     <h3>The Zenith is the most powerfull weapon in terraria, known for its extremely high damage, attack speed, and range. However, its even more well known for being extremely long and complex to craft, requiring swords from all across the games progression. Its known as one of the hardest items to craft in all of gaming. You can get it after defeating the final boss, Moonlord. Although you often have to beat him mutliple times to get all the drops you need for the Zenith.
+    <br><br>
+    This page shows all the swords reqiured to make the Zenith, from the the copper short sword, the first weapon in the game, to the all mighty Terra Blade.
+
+
+    <br><br>
+
+
+
+    <img src="../static/images/weapons/Zenith.png" alt="Zenith.png" width="300" class="zenith">
+
+
+
+
+    <section>
+
+
+
+        <h2></h2>
+        <h1>Weapons reqiured:</h1>
+        <h2></h2>
+
+        {% block main %}{% endblock %}
+
+
+    </section>
+
+    <h3>Images and infomation comes from the offical terraria wiki:  <a href='https://terraria.wiki.gg' target="_blank">terraria.wiki.gg</a></h3>
+</div>
+
+
+</body>
+</html>
