@@ -54,6 +54,7 @@ def render_home():
 def render_data():
     name_search = request.args.get("name", "").strip()
     all_search = request.args.get("all", "").strip()
+    type_search = request.args.get("type", "").strip()
 
     conn = sqlite3.connect(DATABASE)
     conn.row_factory = sqlite3.Row
@@ -63,6 +64,7 @@ def render_data():
         cursor.execute("""
             SELECT * FROM weapons
             WHERE name LIKE ?
+
             ORDER BY damage DESC
         """, (f"%{name_search}%",))
 
@@ -91,6 +93,20 @@ def render_data():
             f"%{all_search}%",
             f"%{all_search}%",
             f"%{all_search}%"
+
+        ))
+
+    elif type_search:
+
+        cursor.execute("""
+            SELECT * FROM weapons
+
+            WHERE type LIKE ?
+
+
+            ORDER BY damage DESC
+        """, (
+            f"%{type_search}%",
 
         ))
 
