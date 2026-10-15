@@ -173,5 +173,8 @@ a {
 
 .search-form input,
 .search-form button {
+	color: #ffffff;
+	background: #6b4528;
 	font: inherit;
+	border: 2px solid #3b2415;
 }

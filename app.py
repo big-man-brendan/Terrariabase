@@ -35,7 +35,7 @@ def run_query(query):
 
 @app.route("/zenith")
 def render_zenith():
-    card = run_query("SELECT * FROM weapons WHERE ID IN (415,14,159,167,70,116,43,117, 61,33,29,11,142,327,249, 318, 336, 334, 133)")
+    card = run_query("SELECT * FROM weapons WHERE ID IN (415,14,159,167,70,116,43,117,61,33,29,11,142,327,249, 318, 336, 133)")
 
     return render_template("zenith_card.html",cards = card)
 
@@ -111,7 +111,7 @@ def render_data():
         ))
 
     else:
-        cursor.execute("SELECT * FROM weapons ORDER BY name")
+        cursor.execute("SELECT * FROM weapons ORDER BY RANDOM()")
 
     cards = cursor.fetchall()
     conn.close()
