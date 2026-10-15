@@ -53,6 +53,22 @@
 
 </h2>
 
+
+        <h2>
+                <form action="{{ url_for('render_data') }}" method="GET" class="search-form">
+    <input
+        type="search"
+        name="type"
+        placeholder="Search by type"
+        value="{{ type_search }}"
+    >
+    <button type="submit">Search</button>
+</form>
+
+        </h2>
+
+</h2>
+
         <h2>
                 <form action="{{ url_for('render_data') }}" method="GET" class="search-form">
     <input

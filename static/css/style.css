@@ -147,6 +147,11 @@ section {
 }
 
 
+html {
+
+	scroll-behavior: smooth;
+}
+
 a {
 	color: #8aff90;
 	text-decoration: underline;

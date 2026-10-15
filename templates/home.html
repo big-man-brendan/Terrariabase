@@ -62,6 +62,22 @@
 
 </h2>
 
+
+        <h2>
+                <form action="{{ url_for('render_data') }}" method="GET" class="search-form">
+    <input
+        type="search"
+        name="type"
+        placeholder="Search by type"
+        value="{{ type_search }}"
+    >
+    <button type="submit">Search</button>
+</form>
+
+        </h2>
+
+</h2>
+
         <h2>
                 <form action="{{ url_for('render_data') }}" method="GET" class="search-form">
     <input
@@ -73,7 +89,7 @@
     <button type="submit">Search</button>
 </form>
 
-</h2>
+
 
 
      </section>
@@ -94,12 +110,12 @@
         <h1>Website fetures</h1>
         <h2></h2>
         <h2>Home page</h2>
-        <h2>Searching by name</h2>
-        <h2>Searchign by all columns</h2>
+        <h2>Searching</h2>
+        <h2>Zenith</h2>
 
         <h3>This is the page that you are on right now. Its the one you start on when you first join the website. This page conatins infomation about the entire site, as well as links to other pages</h3>
-        <h3>This feture allows you to search the entire database just by the name of each item. This lets you be specific, if you already know which weapon you want to find and gain infomation on</h3>
-        <h3>This function allows you to search the databaase by all columns. You can use this to find weapons under a specific rarity, damage, or any other colunms. This is usefull if you dont already know what specific item you want to use</h3>
+        <h3>Theres are 3 ways you can search the database. The first one, searching by name lets you seach specifly by the name of the weapon. Searching by type means you can search by the type of the weapon, for example searching "hammer" would give you all hammers, regardless if the word hammer is in their names. The third way you can search, is by all columns.  You can use this to find weapons under a specific rarity, damage, or any other colunms</h3>
+        <h3>This page lets you see all the weapons that you need to create the legendary Zenith. It also contains a small description of the items.</h3>
 
     </section>
 

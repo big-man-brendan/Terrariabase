@@ -10,6 +10,7 @@
 
 <body>
 
+    <body id="top">
     <div id="container">
 
         <header>
@@ -18,6 +19,8 @@
 
         <nav>
         </nav>
+
+
 
     <section class="navbar">
 
@@ -38,6 +41,23 @@
     >
     <button type="submit">Search</button>
 </form>
+
+
+</h2>
+
+
+        <h2>
+                <form action="{{ url_for('render_data') }}" method="GET" class="search-form">
+    <input
+        type="search"
+        name="type"
+        placeholder="Search by type"
+        value="{{ type_search }}"
+    >
+    <button type="submit">Search</button>
+</form>
+
+        </h2>
 
 </h2>
 
@@ -61,8 +81,9 @@
 
             {% block main %}{% endblock %}
         </section>
-
-
+    <h3><a href="#top">Back to top </a></h3>
+    <br>
+     <h3>Images and infomation comes from the offical terraria wiki:  <a href='https://terraria.wiki.gg' target="_blank">terraria.wiki.gg</a></h3>
 
     </div>
 
